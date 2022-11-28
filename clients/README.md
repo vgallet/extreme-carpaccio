@@ -1,64 +1,9 @@
 # Instructions for participants
 
-French version [here](./README-FR.md).
-
 ## Slicing
 
 To calculate the bill, you need to consider the tax of the country from which the order came from and the reduction.
 
-### Taxes
-Here is the tax table used in the exercise:
-
-*Country* | *Code* | *Tax*
---- | --- | ---
-Germany | DE | 20%
-United Kingdom | UK | 21%
-France | FR | 20%
-Italy | IT | 25%
-Spain | ES | 19%
-Poland | PL | 21%
-Romania | RO | 20%
-Netherlands | NL | 20%
-Belgium | BE | 24%
-Greece | EL | 20%
-Czech Republic | CZ | 19%
-Portugal | PT | 23%
-Hungary | HU | 27%
-Sweden | SE | 23%
-Austria | AT | 22%
-Bulgaria | BG | 21%
-Denmark | DK | 21%
-Finland | FI | 17%
-Slovakia | SK | 18%
-Ireland | IE | 21%
-Croatia | HR | 23%
-Lithuania | LT | 23%
-Slovenia | SI | 24%
-Latvia | LV | 20%
-Estonia | EE | 22%
-Cyprus | CY | 21%
-Luxembourg | LU | 25%
-Malta | MT | 20%
-
-For the order `{"prices":[15.99],"quantities":[1],"country":"ES","reduction":"STANDARD"}`, for example, the response should be `{"total":19.03}`.
-
-### Reductions
-Following the STANDARD reductions applied for the most part of the orders:
-
-| *Total* | *Reduction* |
-| --- | --- |
-| >= 50 000 EUR | 15 % |
-| >= 10 000 EUR | 10 % |
-| >= 7 000 EUR | 7 % |
-| >= 5 000 EUR | 5 % |
-| >= 1 000 EUR | 3 % |
-
-For the order `{"prices":[4.1,8.03,86.83,65.62,44.82],"quantities":[10,3,5,4,5],"country":"AT","reduction":"STANDARD"}`, for example, the response should be `{"total":1166.62}`.
-
-Note that:
-
-1. reductions are applied *after* the taxes;
-2. *another reduction types can appear during the game*. You need to stay tuned in the server's feedback to figure out how to calculate it.
 
 ## Coding
 1. To be able to play, you will need to start an HTTP server in your local machine. Many servers are already available in this directory, you only need to clone this repository and pick will. Otherwise, you can create your own HTTP server. You **don't have to install any HTTP server** like Tomcat, Apache, ngnix, the clients are themserves HTTP servers.
