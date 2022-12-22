@@ -1,7 +1,7 @@
 {
-  "active": true,
-  "cashFreeze": false,
-  "reduction": "STANDARD",
+  "active": false,
+  "cashFreeze": true,
+  "reduction": "PAY THE PRICE",
   "offlinePenalty": 0,
 
   "badRequest": {
